@@ -11,5 +11,7 @@ This frontend is a demo race homepage and registration form. Below is a list of 
 - installed [tailwindcss](https://tailwindcss.com/docs/guides/vite) with **npm i -D tailwindcss postcss autoprefixer**
 - created and configured tailwind and postcss .config.js with **npx tailwindcss init -p**
 - created navigation component
+- installed react router with npm i react-router-dom
+- created components for about section, testimonial cards, and buttons
 
 ---
