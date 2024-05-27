@@ -1,6 +1,8 @@
 import Navigation from "./components/Navigation";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Cards from "./components/Cards"
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -9,6 +11,8 @@ function App() {
       <Navigation />
       <Hero />
       <About />
+      <Cards />
+      <Footer />
     </>
   )
 }

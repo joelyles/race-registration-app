@@ -1,5 +1,14 @@
-{
+[
+  {
+  "id": "1",  
   "name": "Louie Z.",
   "time": "2:24",
   "comments": "The Macon Marathon it the most average marathon option. My time was pretty good, but it was very hot."
+},
+  {
+  "id": "2", 
+  "name": "Eluid K.",
+  "time": "1:59",
+  "comments": "I was finally able to go sub 2. The conditions for this race weren't ideal, but I was able to fuel and hydrate properly. I think the thing that helped give me that extra push were the rattlesnakes near the river."
 }
+]
