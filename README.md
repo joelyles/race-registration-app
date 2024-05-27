@@ -13,5 +13,7 @@ This frontend is a demo race homepage and registration form. Below is a list of 
 - created navigation component
 - installed react router with npm i react-router-dom
 - created components for about section, testimonial cards, and buttons
+- added mapping to cards component for testimonial cards data display
+- created footer component and displayed register and login buttons
 
 ---

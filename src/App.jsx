@@ -9,9 +9,11 @@ function App() {
   return (
     <>
       <Navigation />
+      <div className="h-screen">
       <Hero />
       <About />
       <Cards />
+      </div>
       <Footer />
     </>
   )
