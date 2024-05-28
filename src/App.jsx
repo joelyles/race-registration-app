@@ -13,8 +13,8 @@ function App() {
       <Hero />
       <About />
       <Cards />
-      </div>
       <Footer />
+      </div>
     </>
   )
 }

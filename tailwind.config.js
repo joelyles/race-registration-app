@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      backdropBrightness: {
+        35: '.35'
+      },
       fontFamily: {
         'sans': ['Gill Sans', 'sans-serif'],
       }
