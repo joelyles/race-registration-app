@@ -1,6 +1,6 @@
 # Race Registration Frontend
 
-This frontend is a demo race homepage and registration form. Below is a list of steps in the process, features, and tech that I used to create it.
+This frontend is a demo race homepage and registration form. Below is a list of steps in the process, features, tech, and other resources that I used to create it.
 
 ---
 
@@ -15,5 +15,6 @@ This frontend is a demo race homepage and registration form. Below is a list of 
 - created components for about section, testimonial cards, and buttons
 - added mapping to cards component for testimonial cards data display
 - created footer component and displayed register and login buttons
+- implemented react router and added layout, outlet, and screens - helped by [docs](https://reactrouter.com/en/main/start/overview) and code from [this tutorial](https://www.youtube.com/watch?v=LDB4uaJ87e0).
 
 ---

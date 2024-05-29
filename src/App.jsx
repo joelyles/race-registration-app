@@ -1,22 +1,25 @@
-import Navigation from "./components/Navigation";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Cards from "./components/Cards"
-import Footer from "./components/Footer";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  createRoutesFromElements,
+} from "react-router-dom";
+import Layout from "./layouts/Layout";
+import Home from "./screens/Home";
+import Login from "./screens/Login";
+import Register from "./screens/Register";
 
-function App() {
+const router = createBrowserRouter(
+  createRoutesFromElements(
+  <Route path="/" element={<Layout />}>
+    <Route index element={<Home />} />
+    <Route path="/register" element={<Register />} />
+    <Route path="/login" element={<Login />} />
+  </Route>
+));
 
-  return (
-    <>
-      <Navigation />
-      <div className="h-screen">
-      <Hero />
-      <About />
-      <Cards />
-      <Footer />
-      </div>
-    </>
-  )
-}
+const App = () => {
+  return <RouterProvider router={router} />
+};
 
 export default App

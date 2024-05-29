@@ -1,5 +1,6 @@
 import RegisterButton from "./RegisterButton";
 import LoginButton from "./LoginButton";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
 
@@ -12,7 +13,7 @@ const Navigation = () => {
               <RegisterButton />
               <LoginButton />
             </div>
-            <span className="hidden sm:block ml-auto text-3xl font-semibold">Macon Marathon</span>
+            <Link to="/" className="hidden sm:block ml-auto text-3xl font-semibold">Macon Marathon</Link>
           </div>
         </div>
       </div>
