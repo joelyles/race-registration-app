@@ -1,7 +1,9 @@
 const Register = () => {
   return (
     <>
-      <h2>Sign Up Page</h2>
+      <div className="h-3/4">
+        <h2>Sign Up Page</h2>
+      </div>
     </>
   )
 }
