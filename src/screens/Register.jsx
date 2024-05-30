@@ -1,8 +1,10 @@
+import Form from "../components/Form";
+
 const Register = () => {
   return (
     <>
       <div className="h-3/4">
-        <h2>Sign Up Page</h2>
+        <Form />
       </div>
     </>
   )
