@@ -1,8 +1,10 @@
+import Signin from "../components/Signin"
+
 const Login = () => {
   return (
     <>
       <div className="h-3/4">
-        <h2>Login Page</h2>
+        <Signin />
       </div>
     </>
   )
