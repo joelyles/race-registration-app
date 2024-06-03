@@ -13,7 +13,9 @@ const Navigation = () => {
             <div className="flex mx-2 space-x-2">
               <RegisterButton />
               <LoginButton />
+              <div className="sm:hidden">
               <HomeButton />
+              </div>
             </div>
             <Link to="/" className="hidden sm:block ml-auto text-3xl font-semibold">Macon Marathon</Link>
           </div>

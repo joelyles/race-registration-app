@@ -3,12 +3,12 @@ import SubmitButton from "./SubmitButton"
 const Form = () => {
   return (
     <>
-      <div className="flex h-dvh px-4 bg-slate-200 ">
-        <div className="container flex flex-col mx-auto mt-8 p-6 rounded-md shadow-md bg-white h-3/5 w-3/4">
-          <h4 className="flex font-semibold tracking-wider">Registration Form</h4>
-          <div className="container flex flex-col items-center h-4/5 p-8 bg-blue-200 mt-6 rounded-md shadow-md">
-            <div className="flex flex-col overflow-scroll bg-slate-200 max-w-sm">
-              <div className="flex flex-col sm:flex-row justify-left gap-4 p-2">
+      <div className="h-full flex px-4 bg-slate-200 ">
+        <div className="flex flex-col mx-auto mt-8 mb-8 p-6 rounded-md shadow-md bg-white h-3/4 w-3/4">
+          <h4 className="flex font-semibold tracking-wider justify-center text-2xl ">Registration Form</h4>
+          <div className="flex flex-col items-center p-8 bg-blue-200 mt-6 rounded-md shadow-md h-3/4">
+            <div className="flex flex-col overflow-scroll my-auto bg-blue-100 max-w-m w-3/4 p-8 rounded-md">
+              <div className="flex flex-col justify-left gap-4 p-2">
                 <div className="flex flex-col grow">
                   <label className="p-1">First Name</label>
                   <input name="firstname" className="max-w-44 min-w-28 p-1 rounded-md shadow-md" type="text" placeholder="First Name"></input>
@@ -44,10 +44,12 @@ const Form = () => {
                   <div className="p-1">Phone Number</div>
                   <input className="max-w-44 min-w-28 p-1 rounded-md shadow-md" type="text" placeholder="123-555-1234"></input>
                 </div>
+                 <div className="pt-4 my-auto mx-auto">
+                  <SubmitButton />
+                 </div>
               </div>
             </div>
           </div>
-          <SubmitButton />
         </div>
       </div>
     </>

@@ -3,7 +3,7 @@ import Form from "../components/Form";
 const Register = () => {
   return (
     <>
-      <div className="h-3/4">
+      <div className="h-dvh">
         <Form />
       </div>
     </>
