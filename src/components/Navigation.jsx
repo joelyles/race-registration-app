@@ -1,6 +1,7 @@
 import RegisterButton from "./RegisterButton";
 import LoginButton from "./LoginButton";
 import { Link } from "react-router-dom";
+import HomeButton from "./HomeButton";
 
 const Navigation = () => {
 
@@ -12,6 +13,7 @@ const Navigation = () => {
             <div className="flex mx-2 space-x-2">
               <RegisterButton />
               <LoginButton />
+              <HomeButton />
             </div>
             <Link to="/" className="hidden sm:block ml-auto text-3xl font-semibold">Macon Marathon</Link>
           </div>
