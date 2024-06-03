@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <>
       <Navigation />
-      <div className="h-screen">
+      <div className="h-dvh">
         <Outlet />
         <Footer />
       </div>

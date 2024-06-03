@@ -1,12 +1,14 @@
+import SubmitButton from "./SubmitButton"
+
 const Form = () => {
   return (
     <>
-      <div className="flex h-screen px-4 bg-slate-200 ">
-        <div className="flex flex-col mx-auto mt-8 p-6 rounded-md shadow-md bg-white h-1/2 w-3/4">
+      <div className="flex h-dvh px-4 bg-slate-200 ">
+        <div className="container flex flex-col mx-auto mt-8 p-6 rounded-md shadow-md bg-white h-3/5 w-3/4">
           <h4 className="flex font-semibold tracking-wider">Registration Form</h4>
-          <div className="flex flex-col p-8 bg-blue-200 mt-6 rounded-md shadow-md">
-            <div className="flex flex-col bg-slate-200 max-w-sm">
-              <div className="flex flex-row justify-left gap-4 p-2">
+          <div className="container flex flex-col items-center h-4/5 p-8 bg-blue-200 mt-6 rounded-md shadow-md">
+            <div className="flex flex-col overflow-scroll bg-slate-200 max-w-sm">
+              <div className="flex flex-col sm:flex-row justify-left gap-4 p-2">
                 <div className="flex flex-col grow">
                   <label className="p-1">First Name</label>
                   <input name="firstname" className="max-w-44 min-w-28 p-1 rounded-md shadow-md" type="text" placeholder="First Name"></input>
@@ -36,7 +38,7 @@ const Form = () => {
               <div className="flex flex-col justify-left gap-4 p-2">
                 <div className="flex flex-col">
                   <div className="p-1">Email</div>
-                  <input className="max-w-44 min-w-64 p-1 rounded-md shadow-md" type="text" placeholder="email@emailaddress.email"></input>
+                  <input className="max-w-72 min-w-28 p-1 rounded-md shadow-md" type="text" placeholder="email@emailaddress.email"></input>
                 </div>
                 <div className="flex flex-col">
                   <div className="p-1">Phone Number</div>
@@ -45,7 +47,7 @@ const Form = () => {
               </div>
             </div>
           </div>
-          <h4 className="flex justify-center pt-8">submit button goes here</h4>
+          <SubmitButton />
         </div>
       </div>
     </>
