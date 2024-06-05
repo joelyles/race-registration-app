@@ -18,5 +18,6 @@ This frontend is a demo race homepage and registration form. Below is a list of 
 - implemented react router and added layout, outlet, and screens - helped by [docs](https://reactrouter.com/en/main/start/overview) and code from [this tutorial](https://www.youtube.com/watch?v=LDB4uaJ87e0)
 - added Signin.jsx and Form.jsx components to login and register screens
 - added RegDetails.jsx component and submission screen for displaying registration details
+- installed axios with **npm i axios**
 
 ---
