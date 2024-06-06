@@ -1,13 +1,31 @@
 import { useRef, useEffect } from "react"
 import SubmitButton from "./SubmitButton"
 
+const REGISTER_URL = "/register"
+
 const Form = () => {
   const userRef = useRef();
 
   useEffect(() => {
     userRef.current.focus();
   }, [])
-  
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+    try {
+      const response = await axios.post(REGISTER_URL, JSON.stringify({ firstname, lastname, age, home, email, phone }),
+        {
+          headers: {
+            'Content-Type': 'application/json'
+        }
+      }
+    );
+      } catch (error) {
+        setErrMsg('Failed')
+      }
+  }
+
   return (
     <>
       <div className="h-full flex px-4 bg-slate-200 ">
@@ -15,6 +33,7 @@ const Form = () => {
           <h4 className="flex font-semibold tracking-wider justify-center text-2xl ">Registration Form</h4>
           <div className="flex flex-col items-center p-8 bg-blue-200 mt-6 rounded-md shadow-md h-3/4">
             <div className="flex flex-col overflow-scroll my-auto bg-blue-100 max-w-m w-vw p-8 rounded-md">
+              <form onSubmit={handleSubmit}>
               <div className="flex flex-col justify-left gap-4 p-2">
                 <div className="flex flex-col grow">
                   <label className="p-1">First Name</label>
@@ -52,9 +71,11 @@ const Form = () => {
                   <input className="max-w-44 min-w-28 p-1 rounded-md shadow-md" type="text" placeholder="123-555-1234"></input>
                 </div>
                  <div className="pt-4 my-auto mx-auto">
+                  <button>Submit</button>
                   <SubmitButton />
                  </div>
               </div>
+              </form>
             </div>
           </div>
         </div>
