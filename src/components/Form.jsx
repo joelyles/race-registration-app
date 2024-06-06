@@ -1,6 +1,13 @@
+import { useRef, useEffect } from "react"
 import SubmitButton from "./SubmitButton"
 
 const Form = () => {
+  const userRef = useRef();
+
+  useEffect(() => {
+    userRef.current.focus();
+  }, [])
+  
   return (
     <>
       <div className="h-full flex px-4 bg-slate-200 ">
@@ -11,7 +18,7 @@ const Form = () => {
               <div className="flex flex-col justify-left gap-4 p-2">
                 <div className="flex flex-col grow">
                   <label className="p-1">First Name</label>
-                  <input name="firstname" className="max-w-44 min-w-28 p-1 rounded-md shadow-md" type="text" placeholder="First Name"></input>
+                  <input ref={userRef} name="firstname" className="max-w-44 min-w-28 p-1 rounded-md shadow-md" type="text" placeholder="First Name"></input>
                 </div>
                 <div className="flex flex-col grow">
                   <div className="p-1">Last Name</div>
