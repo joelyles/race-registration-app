@@ -8,7 +8,8 @@ const Form = () => {
   const [firstname, setFirstname] = useState('');
   const [lastname, setLastname] = useState('');
   const [age, setAge] = useState('');
-  const [home, setHome] = useState('');
+  const [city, setCity] = useState('');
+  const [state, setState] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
 
@@ -20,7 +21,7 @@ const handleSubmit = async (e) => {
   e.preventDefault();
 
     try {
-      const response = await axios.post(REGISTER_URL, JSON.stringify({ firstname, lastname, age, home, email, phone }),
+      const response = await axios.post(REGISTER_URL, JSON.stringify({ firstname, lastname, age, city, state, email, phone }),
         {
           headers: {
             'Content-Type': 'application/json'
@@ -63,8 +64,8 @@ const handleSubmit = async (e) => {
               <div className="flex flex-col p-2">
                 <div className="flex flex-col gap-2">
                   <div className="p-1">Location</div>
-                  <input className="max-w-72 min-w-28 p-1 rounded-md shadow-md" type="text" placeholder="City"></input>
-                  <input className="max-w-72 min-w-28 p-1 rounded-md shadow-md" type="text" placeholder="State"></input>
+                  <input onChange={(e) => setCity(e.target.value)} className="max-w-72 min-w-28 p-1 rounded-md shadow-md" type="text" placeholder="City"></input>
+                  <input onChange={(e) => setState(e.target.value)} className="max-w-72 min-w-28 p-1 rounded-md shadow-md" type="text" placeholder="State"></input>
                 </div>
               </div>
               <div className="flex flex-col justify-left gap-4 p-2">
@@ -80,7 +81,7 @@ const handleSubmit = async (e) => {
                   <SubmitButton />
                  </div>
               </div>
-              {/* <button>Submit</button> */}
+              <button>Submit</button>
               </form>
             </div>
           </div>
