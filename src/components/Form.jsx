@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react"
 import SubmitButton from "./SubmitButton"
+import ApiServer from "../api/ApiServer"
 
 const REGISTER_URL = "/register"
 
@@ -12,22 +13,26 @@ const Form = () => {
   const [state, setState] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [success, setSuccess] = useState(false);
 
   useEffect(() => {
     userRef.current.focus();
   }, [])
 
+/* update CORS settings in backend node JS server */
 const handleSubmit = async (e) => {
   e.preventDefault();
 
     try {
-      const response = await axios.post(REGISTER_URL, JSON.stringify({ firstname, lastname, age, city, state, email, phone }),
+   /*    const response = await ApiServer.post(REGISTER_URL, JSON.stringify({ firstname, lastname, age, city, state, email, phone }),
         {
           headers: {
             'Content-Type': 'application/json'
         }
       }
-    );
+    ); */
+    console.log(firstname, lastname, age, city, state, email, phone);
+    setSuccess(true);
       } catch (error) {
         console.log('failed')
       }
