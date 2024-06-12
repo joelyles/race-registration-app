@@ -24,13 +24,13 @@ const handleSubmit = async (e) => {
   e.preventDefault();
 
     try {
-   /*    const response = await ApiServer.post(REGISTER_URL, JSON.stringify({ firstname, lastname, age, city, state, email, phone }),
+      const response = await ApiServer.post(REGISTER_URL, JSON.stringify({ firstname, lastname, age, city, state, email, phone }),
         {
           headers: {
             'Content-Type': 'application/json'
         }
       }
-    ); */
+    );
     console.log(firstname, lastname, age, city, state, email, phone);
     setSuccess(true);
       } catch (error) {
