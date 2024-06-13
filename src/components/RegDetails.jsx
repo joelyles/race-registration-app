@@ -1,4 +1,21 @@
+import { useEffect } from "react";
+import instance from "../api/ApiServer";
+
 const RegDetails = () => {
+
+  useEffect(() => {
+    const getRegDetails = async () => {
+      try {
+        const response = await instance.get('/registrants');
+        const details = response;
+        console.log(details.data)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    getRegDetails();
+  }, [])
+
   return (
     <>
       <div className="h-full flex px-4 bg-slate-200">
