@@ -1,13 +1,16 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import instance from "../api/ApiServer";
 
 const RegDetails = () => {
+  const [items, setItems] = useState([]);
 
   useEffect(() => {
     const getRegDetails = async () => {
       try {
         const response = await instance.get('/registrants');
         const details = response;
+        const regArray = Object.values(details.data);
+        setItems(regArray);
         console.log(details.data)
       } catch (err) {
         console.log(err)
@@ -21,11 +24,21 @@ const RegDetails = () => {
       <div className="h-full flex px-4 bg-slate-200">
         <div className="flex flex-col mx-auto mt-8 p-6 rounded-md shadow-md bg-white h-3/4 w-vw sm:w-3/4">
           <div className="mx-auto">
-            <h2 className="font-semibold tracking-wider sm:text-2xl">Thanks for registering, # # # # # #!</h2>
+            <h2 className="font-semibold tracking-wider sm:text-2xl">Thanks for registering, </h2>
           </div>
           <div className="pt-5 pl-4">
             <p>Registration completed on # # # #</p>
           </div>
+
+          <div>
+              {items.map((item, index) => (
+                <p key={index}>
+                  {item.firstname}
+                  <span>{item.lastname}</span>
+                </p>
+              ))}
+          </div>
+
           <div className="pt-6">
             <table>
               <tbody>
