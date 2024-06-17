@@ -13,7 +13,7 @@ const Navigation = () => {
             <div className="flex mx-2 space-x-2">
               <RegisterButton />
               <LoginButton />
-              <div className="sm:hidden">
+              <div className="lg:hidden">
               <HomeButton />
               </div>
             </div>
