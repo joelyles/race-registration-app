@@ -83,10 +83,9 @@ const handleSubmit = async (e) => {
                   <input onChange={(e) => setPhone(e.target.value)} className="max-w-44 min-w-28 p-1 rounded-md shadow-md" type="text" placeholder="123-555-1234"></input>
                 </div>
                  <div className="pt-4 my-auto mx-auto">
-                  <SubmitButton />
+                  <button className="bg-blue-800 text-slate-200 px-4 py-2 rounded-md hover:bg-blue-900">Submit</button>
                  </div>
               </div>
-              <button>Submit</button>
               </form>
             </div>
           </div>
