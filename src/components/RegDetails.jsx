@@ -3,6 +3,7 @@ import instance from "../api/ApiServer";
 
 const RegDetails = () => {
   const [items, setItems] = useState([]);
+  const [details, setDetails] = useState();
 
   useEffect(() => {
     const getRegDetails = async () => {
@@ -10,8 +11,11 @@ const RegDetails = () => {
         const response = await instance.get('/registrants');
         const details = response;
         const regArray = Object.values(details.data);
+        const objectData = regArray.entries();
         setItems(regArray);
-        console.log(details.data)
+        console.log(details.data.at(-1))
+        const registrantData = details.data.at(-1);
+        setDetails(registrantData);
       } catch (err) {
         console.log(err)
       }
@@ -38,7 +42,6 @@ const RegDetails = () => {
                 </p>
               ))}
           </div>
-
           <div className="pt-6">
             <table>
               <tbody>
