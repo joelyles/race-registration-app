@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
     <>
-      <section style={{ backgroundImage: `url(public/images/martins-zemlickis-NPFu4GfFZ7E-unsplash.jpg)`
+      <section style={{ backgroundImage: `url(/images/martins-zemlickis-NPFu4GfFZ7E-unsplash.jpg)`
        }} className="bg-fixed bg-cover bg-center" >
         <div className="backdrop-brightness-35 mx-auto pt-10 px-2 sm:px-6 md:px-8">
           <div className="flex flex-col items-center justify-between max-w-6xl sm:m-auto h-36 sm:h-36 md:h-48">
