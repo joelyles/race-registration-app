@@ -4,7 +4,6 @@ import RegCards from "./RegCards";
 
 const RegDetails = () => {
   const [items, setItems] = useState([]);
-  const [details, setDetails] = useState();
 
   useEffect(() => {
     const getRegDetails = async () => {
@@ -12,11 +11,8 @@ const RegDetails = () => {
         const response = await instance.get('/registrants');
         const details = response;
         const regArray = Object.values(details.data);
-        const objectData = regArray.entries();
         setItems(regArray);
         console.log(details.data)
-        const registrantData = details.data;
-        setDetails(registrantData);
       } catch (err) {
         console.log(err)
       }
@@ -25,81 +21,27 @@ const RegDetails = () => {
   }, [])
 
   return (
-    <>
-    {details.map((item, index) => (
-      <>
-                <RegCards key={index} item={item}/>
-                <p>{details.data}</p>
-                </>
-              ))}
-    <RegCards />
-    <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 py-4 px-4">
-      <div className="bg-slate-200 shadow-slate-400 shadow-lg rounded-lg relative">
-        <div className="px-4 py-4">
-          <div className="flex flex-col mt-2 items-start">
-            <div className="font-semibold text-blue-900">Name</div>
-            <div className="italic">Age Group</div>
-            <div className="italic">Hometown</div>
-            <div className="italic">Email</div>
-            <div className="italic">Phone</div>
+  <>
+    <div className="flex flex-col bg-slate-100 h-screen p-4">
+      <h2 className="mx-auto my-8 font-semibold tracking-wider justify-center text-2xl">Registrants</h2>
+    {items.map((item, index) => (
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-4 px-4 mx-8">
+        <div className="bg-slate-200 shadow-slate-400 shadow-lg rounded-lg relative">
+          <div className="px-4 py-4">
+            <div className="flex flex-col mt-2 items-start">
+              <div className="font-semibold text-blue-900">Name: <span key={index} className="font-normal">{item.firstname} {item.lastname}</span></div>
+              <div className="italic">Age Group: &nbsp; <span className="not-italic font-normal">{item.age}</span></div>
+              <div className="italic">Hometown: &nbsp; <span className="not-italic font-normal">{item.city}, {item.state}</span></div>
+              <div className="italic">Email: &nbsp; <span className="not-italic font-normal">{item.email}</span></div>
+              <div className="italic">Phone: &nbsp; <span className="not-italic font-normal">{item.phone}</span></div>
+              <div className="italic">Submission id: &nbsp; <span className="not-italic font-normal">{item._id.slice(-10)}</span></div>
+            </div>
           </div>
         </div>
       </div>
+    ))}
     </div>
-      <div className="h-full flex px-4 bg-slate-200">
-        <div className="flex flex-col mx-auto mt-8 p-6 rounded-md shadow-md bg-white h-3/4 w-vw sm:w-3/4">
-          <div className="mx-auto">
-            <h2 className="font-semibold tracking-wider sm:text-2xl">Thanks for registering, </h2>
-          </div>
-          <div className="pt-5 pl-4">
-            <p>Registration completed on # # # #</p>
-          </div>
-
-          <div>
-             {/*  {items.map((item, index) => (
-                <p key={index}>
-                  {item.firstname}
-                  <span>{item.lastname}</span>
-                </p>
-              ))} */}
-          </div>
-          <div className="pt-6">
-            <table>
-              <tbody>
-                <tr>
-                  <td className="font-semibold p-4">Bib Number</td>
-                  <td className="p-4"># #</td>
-                </tr>
-                <tr>
-                  <td className="font-semibold p-4">Name</td>
-                  <td className="p-4"># #</td>
-                </tr>
-                <tr>
-                  <td className="font-semibold  p-4">Age Group</td>
-                  <td className="p-4"># #</td>
-                </tr>
-                <tr>
-                  <td className="font-semibold p-4">City</td>
-                  <td className="p-4"># #</td>
-                </tr>
-                <tr>
-                  <td className="font-semibold p-4">State</td>
-                  <td className="p-4"># #</td>
-                </tr>
-                <tr>
-                  <td className="font-semibold p-4">Email</td>
-                  <td className="p-4"># #</td>
-                </tr>
-                <tr>
-                  <td className="font-semibold p-4">Phone</td>
-                  <td className="p-4"># #</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-    </>
+  </>
   )
 }
 

@@ -3,7 +3,7 @@ import RegDetails from "../components/RegDetails";
 const Submission = () => {
   return (
     <>
-      <div className="h-dvh">
+      <div className="">
         <RegDetails />
       </div>
     </>
