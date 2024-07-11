@@ -5,10 +5,10 @@ import { NavLink } from "react-router-dom";
 import HomeButton from "./HomeButton";
 
 const Navigation = () => {
-  const activeLink = ({ isActive }) => isActive ? "bg-blue-900 text-slate-200 px-4 py-2 rounded-md hover:bg-blue-900" : "bg-blue-600 text-slate-200 px-4 py-2 rounded-md hover:bg-blue-900";
+  const activeLink = ({ isActive }) => isActive ? "bg-blue-900 text-slate-200 px-4 py-2 rounded-md hover:bg-blue-900" : "bg-transparent text-slate-200 px-4 py-2 rounded-md hover:bg-blue-900";
 
   return (
-    <section className="bg-yellow-500">
+    <section className="bg-transparent">
       <div className="mx-auto max-w-7xl px-2 sm:px-6 md:px-8">
         <div className="flex h-20 items-center justify-between">
           <div className="flex flex-1 items-center justify-center">

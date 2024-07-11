@@ -5,12 +5,12 @@ import Footer from "../components/Footer";
 const Layout = () => {
   return (
     <>
-    <div className="lg:static">
-      <Navigation />
+    <div className="static">
+      
       <div className="">
       <Outlet />
       </div>
-        <div className="lg:absolute lg:bottom-0 lg:w-full">
+        <div className="sticky bottom-0 w-full">
           <Footer />
         </div>
     </div>

@@ -5,8 +5,8 @@ import Cards from "../components/Cards"
 const Home = () => {
   return (
     <>
-      <div className="">
         <Hero />
+      <div className="mt-96">
         <About />
         <Cards />
       </div>
