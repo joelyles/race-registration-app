@@ -19,6 +19,8 @@ This frontend is a demo race homepage and registration form. Below is a list of 
 - added Signin.jsx and Form.jsx components to login and register screens
 - added RegDetails.jsx component and submission screen for displaying registration details
 - installed axios with **npm i axios**
-- added focus upon load to form component - helped by code from [this tutorial series](https://www.youtube.com/playlist?list=PL0Zuz27SZ-6PRCpm9clX0WiBEMB70FWwd)
+- for sub points listed - helped by code from [this tutorial series](https://www.youtube.com/playlist?list=PL0Zuz27SZ-6PRCpm9clX0WiBEMB70FWwd)
+  - added focus upon load to form component
+  - auth provider file created
 
 ---
