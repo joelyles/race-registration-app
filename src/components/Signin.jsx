@@ -1,7 +1,19 @@
+import { useRef } from "react"
 import { Link } from "react-router-dom"
 import SubmitButton from "./SubmitButton"
 
 const Signin = () => {
+  const userRef = useRef();
+
+  const [user, setUser] = useState('');
+  const [password, setPassword] = useState('');
+
+  useEffect(() => {
+    userRef.current.focus();
+  }, []);
+
+  //add handle submit function
+
   return (
     <>
      <div className="flex px-4">
