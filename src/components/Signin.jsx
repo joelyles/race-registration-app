@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useRef, useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import SubmitButton from "./SubmitButton"
 
@@ -8,16 +8,16 @@ const Signin = () => {
   const [user, setUser] = useState('');
   const [password, setPassword] = useState('');
 
-  useEffect(() => {
+/*   useEffect(() => {
     userRef.current.focus();
-  }, []);
+  }, []); */
 
   //add handle submit function
 
   return (
     <>
      <div className="flex px-4">
-        <div className="flex flex-col items-center mx-auto my-8 p-4 h-dvh w-vw sm:w-3/4">
+        <div className="flex flex-col mt-32 items-center mx-auto p-4 h-dvh w-vw sm:w-3/4">
           <h4 className="flex font-semibold tracking-wider justify-center text-2xl">Account Login </h4>
             <div className="flex flex-col my-10 bg-blue-400 w-vw sm:w-72 p-8 rounded-md">
               <div className="flex flex-col justify-left gap-4 p-2">
