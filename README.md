@@ -21,6 +21,7 @@ This frontend is a demo race homepage and registration form. Below is a list of 
 - installed axios with **npm i axios**
 - for sub points listed - helped by code from [this tutorial series](https://www.youtube.com/playlist?list=PL0Zuz27SZ-6PRCpm9clX0WiBEMB70FWwd)
   - added focus upon load to form component
-  - auth provider file created
+  - authProvider file created
+  - hooks folder + useAuth file created
 
 ---
