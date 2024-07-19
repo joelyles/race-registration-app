@@ -9,6 +9,7 @@ import Home from "./screens/Home";
 import Login from "./screens/Login";
 import Register from "./screens/Register";
 import Submission from "./screens/Submission";
+import RequireAuth from "./components/RequireAuth";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,7 +17,9 @@ const router = createBrowserRouter(
     <Route index element={<Home />} />
     <Route path="/register" element={<Register />} />
     <Route path="/login" element={<Login />} />
-    <Route path="/submission" element={<Submission />}/>
+      <Route element={<RequireAuth />}>
+        <Route path="/submission" element={<Submission />}/>
+      </Route>
   </Route>
 ));
 
