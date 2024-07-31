@@ -10,12 +10,11 @@ const Hero = () => {
         <Navigation />
         </div>
         <div className="backdrop-brightness-35 mx-auto pt-10 px-2 sm:px-6 md:px-8">
-          <div className="flex flex-col items-center justify-between max-w-6xl sm:m-auto h-48 sm:h-48 md:h-48">
-            <div className="flex flex-col items-center">
-              <div className="text-4xl font-semibold md:text-5xl text-slate-200">Macon Marathon</div>
-              <div className="hidden md:block tracking-wider text-slate-200">nothing special, just a marathon in macon, ga</div>
+          <div className="flex flex-col items-right justify-between max-w-lg  h-48 sm:h-48 md:h-48">
+            <div className="flex flex-col">
+              {/* <div className="text-4xl font-semibold md:text-5xl text-slate-200">Macon Marathon</div> */}
+              <div className="hidden md:block tracking-wider text-slate-200 text-5xl ">nothing special, <br/> just a marathon in macon, ga</div>
             </div>
-            <div className="flex text-2xl md:text-3xl py-10 text-slate-200">August 1, 2024</div>
           </div>
         </div>
       </section>

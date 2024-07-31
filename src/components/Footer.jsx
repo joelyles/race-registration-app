@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="flex gap-2 mt-2">
             <HomeButton />
             <RegisterButton />
-            <LoginButton />
+            {/* <LoginButton /> */}
           </div>
         </div>
         <div className="mx-auto flex items-center justify-center">
