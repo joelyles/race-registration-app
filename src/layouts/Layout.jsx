@@ -8,6 +8,7 @@ const Layout = () => {
     <div className="static">
       
       <div className="">
+      <Navigation />
       <Outlet />
       </div>
         <div className="sticky bottom-0 w-full">

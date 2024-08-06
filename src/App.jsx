@@ -16,10 +16,13 @@ const router = createBrowserRouter(
   <Route path="/" element={<Layout />}>
     <Route index element={<Home />} />
     <Route path="/register" element={<Register />} />
+    <Route path="/submission" element={<Submission />}/>
     <Route path="/login" element={<Login />} />
-      <Route element={<RequireAuth />}>
-        <Route path="/submission" element={<Submission />}/>
-      </Route>
+      
+      {/* <Route element={<RequireAuth />}>
+        
+      </Route> */}
+      
   </Route>
 ));
 
