@@ -22,17 +22,17 @@ const Form = () => {
   }, [])
 
 /* update CORS settings in backend node JS server */
-const handleSubmit = async (e) => {
+/* const handleSubmit = async (e) => {
   e.preventDefault();
 
-/*     try {
+    try {
       const response = await ApiServer.post(REGISTER_URL, JSON.stringify({ firstname, lastname, age, city, state, email, phone }),
         {
           headers: {
             'Content-Type': 'application/json'
         }
       }
-    ); */
+    );
     console.log(firstname, lastname, age, city, state, email, phone);
     alert(`
       Registration Complete \n 
@@ -44,10 +44,10 @@ const handleSubmit = async (e) => {
       phone: ${phone}
       `)
     setSuccess(true);
-/*       } catch (error) {
+      } catch (error) {
         console.log('failed')
-      } */
-  }
+      }
+  } */
 
   return (
     <>
@@ -55,7 +55,7 @@ const handleSubmit = async (e) => {
       <div className="absolute top-0 min-w-full min-h-dvh bg-slate-600">
         <Navigation />
         <div className="h-full flex px-4">
-          <div className="flex flex-col mx-auto mt-32 mb-8 p-4 rounded-md bg-white h-1/2 w-5/6 sm:w-3/4">
+          <div className="flex flex-col mx-auto mt-32 mb-8 p-4 rounded-md bg-transparent h-1/2 w-5/6 sm:w-3/4">
             <h4 className="flex font-semibold tracking-wider justify-center text-2xl ">Registration Complete</h4>
             <div className="flex flex-col items-center p-4 mt-6 rounded-md h-100">
               <div className="flex flex-col overflow-scroll my-auto bg-blue-300 w-5/6 p-2 rounded-md shadow-md">
@@ -80,11 +80,10 @@ const handleSubmit = async (e) => {
         </div>
       </div>
     ) : (
-      
       <div className="absolute top-0 min-w-full min-h-dvh bg-slate-600">
         <Navigation />
-        <div className="h-full flex px-4">
-          <div className="flex flex-col mx-auto mt-32 mb-8 p-4 rounded-md h-3/4 w-5/6 sm:w-3/4">
+        <div className="h-full flex px-4 min-h-dvh">
+          <div className="flex flex-col mx-auto mb-8 p-4 rounded-md h-3/4 w-5/6 sm:w-3/4">
             <h4 className="flex font-semibold tracking-wider justify-center text-2xl ">Registration Form</h4>
             <div className="flex flex-col items-center p-4 mt-6 rounded-md h-100">
               <div className="flex flex-col overflow-scroll my-auto bg-blue-300 w-5/6 p-2 rounded-md shadow-md">
