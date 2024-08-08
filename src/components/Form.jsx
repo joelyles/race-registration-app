@@ -2,6 +2,7 @@ import { useRef, useEffect, useState } from "react"
 import SubmitButton from "./SubmitButton"
 import ApiServer from "../api/ApiServer"
 import HomeButton from "./HomeButton"
+import Navigation from "./Navigation"
 
 const REGISTER_URL = "/register"
 
@@ -51,33 +52,39 @@ const handleSubmit = async (e) => {
   return (
     <>
     {success ? (
-       <div className="h-full flex px-4">
-        <div className="flex flex-col mx-auto mt-32 mb-8 p-4 rounded-md bg-white h-1/2 w-5/6 sm:w-3/4">
-          <h4 className="flex font-semibold tracking-wider justify-center text-2xl ">Registration Complete</h4>
-          <div className="flex flex-col items-center p-4 mt-6 rounded-md h-100">
-            <div className="flex flex-col overflow-scroll my-auto bg-blue-300 w-5/6 p-2 rounded-md shadow-md">
-                  <div className="flex flex-col">
-                    <h4 className="font-semibold pb-4">Registration Details</h4>
-                    <div className="flex">
-                    name: &nbsp; {firstname} {lastname}
-                    <br/> 
-                    age: &nbsp; {age}
-                    <br/> 
-                    location: &nbsp; {city}, {state}
-                    <br/> 
-                    email: &nbsp; {email}
-                    <br/> 
-                    phone: &nbsp; {phone}
+      <div className="absolute top-0 min-w-full min-h-dvh bg-slate-600">
+        <Navigation />
+        <div className="h-full flex px-4">
+          <div className="flex flex-col mx-auto mt-32 mb-8 p-4 rounded-md bg-white h-1/2 w-5/6 sm:w-3/4">
+            <h4 className="flex font-semibold tracking-wider justify-center text-2xl ">Registration Complete</h4>
+            <div className="flex flex-col items-center p-4 mt-6 rounded-md h-100">
+              <div className="flex flex-col overflow-scroll my-auto bg-blue-300 w-5/6 p-2 rounded-md shadow-md">
+                    <div className="flex flex-col">
+                      <h4 className="font-semibold pb-4">Registration Details</h4>
+                      <div className="flex">
+                      name: &nbsp; {firstname} {lastname}
+                      <br/> 
+                      age: &nbsp; {age}
+                      <br/> 
+                      location: &nbsp; {city}, {state}
+                      <br/> 
+                      email: &nbsp; {email}
+                      <br/> 
+                      phone: &nbsp; {phone}
+                      </div>
                     </div>
-                  </div>
+              </div>
             </div>
+            <div className="pt-10"><HomeButton /></div>
           </div>
-          <div className="pt-10"><HomeButton /></div>
         </div>
       </div>
     ) : (
-      <div className="h-full flex px-4">
-          <div className="flex flex-col mx-auto mt-32 mb-8 p-4 rounded-md bg-transparent h-3/4 w-5/6 sm:w-3/4">
+      
+      <div className="absolute top-0 min-w-full min-h-dvh bg-slate-600">
+        <Navigation />
+        <div className="h-full flex px-4">
+          <div className="flex flex-col mx-auto mt-32 mb-8 p-4 rounded-md h-3/4 w-5/6 sm:w-3/4">
             <h4 className="flex font-semibold tracking-wider justify-center text-2xl ">Registration Form</h4>
             <div className="flex flex-col items-center p-4 mt-6 rounded-md h-100">
               <div className="flex flex-col overflow-scroll my-auto bg-blue-300 w-5/6 p-2 rounded-md shadow-md">
@@ -127,6 +134,7 @@ const handleSubmit = async (e) => {
             </div>
           </div>
         </div>
+      </div>
       )
     }
     </>

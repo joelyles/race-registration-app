@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import instance from "../api/ApiServer";
 import RegCards from "./RegCards";
+import Navigation from "./Navigation";
 
 const RegDetails = () => {
   const [items, setItems] = useState([]);
@@ -22,7 +23,9 @@ const RegDetails = () => {
 
   return (
   <>
-    <div className="flex flex-col bg-slate-100 h-screen p-4">
+  <div className="absolute top-0 min-w-full min-h-dvh bg-slate-600">
+        <Navigation />  
+    <div className="flex flex-col bg-slate-600 h-screen p-4">
       <h2 className="mx-auto my-8 font-semibold tracking-wider justify-center text-2xl">Registrants</h2>
     {items.map((item, index) => (
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-4 px-4 mx-8">
@@ -41,6 +44,7 @@ const RegDetails = () => {
       </div>
     ))}
     </div>
+  </div>
   </>
   )
 }
