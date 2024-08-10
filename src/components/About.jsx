@@ -1,4 +1,3 @@
-import RegisterButton from "./RegisterButton"
 import { Link } from "react-router-dom"
 
 const About = () => {

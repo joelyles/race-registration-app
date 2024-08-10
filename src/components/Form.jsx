@@ -22,7 +22,7 @@ const Form = () => {
   }, [])
 
 /* update CORS settings in backend node JS server */
-/* const handleSubmit = async (e) => {
+const handleSubmit = async (e) => {
   e.preventDefault();
 
     try {
@@ -47,7 +47,7 @@ const Form = () => {
       } catch (error) {
         console.log('failed')
       }
-  } */
+  }
 
   return (
     <>
