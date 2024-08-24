@@ -58,7 +58,7 @@ const handleSubmit = async (e) => {
           <div className="flex flex-col mx-auto mt-32 mb-8 p-4 rounded-md bg-transparent h-1/2 w-5/6 sm:w-3/4">
             <h4 className="flex font-semibold tracking-wider justify-center text-2xl ">Registration Complete</h4>
             <div className="flex flex-col items-center p-4 mt-6 rounded-md h-100">
-              <div className="flex flex-col overflow-scroll my-auto bg-blue-300 w-5/6 p-2 rounded-md shadow-md">
+              <div className="flex flex-col overflow-scroll my-auto bg-slate-300 w-5/6 p-2 rounded-md shadow-md">
                     <div className="flex flex-col">
                       <h4 className="font-semibold pb-4">Registration Details</h4>
                       <div className="flex">
@@ -86,7 +86,7 @@ const handleSubmit = async (e) => {
           <div className="flex flex-col mx-auto mb-8 p-4 rounded-md h-3/4 w-5/6 sm:w-3/4">
             <h4 className="flex font-semibold tracking-wider justify-center text-2xl ">Registration Form</h4>
             <div className="flex flex-col items-center p-4 mt-6 rounded-md h-100">
-              <div className="flex flex-col overflow-scroll my-auto bg-blue-300 w-5/6 p-2 rounded-md shadow-md">
+              <div className="flex flex-col overflow-scroll my-auto bg-slate-300 w-5/6 p-2 rounded-md shadow-md">
                 <form onSubmit={handleSubmit}>
                 <div className="flex flex-col justify-left gap-4 p-2">
                   <div className="flex flex-col grow">
