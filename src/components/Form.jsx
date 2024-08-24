@@ -34,7 +34,7 @@ const handleSubmit = async (e) => {
       }
     );
     console.log(firstname, lastname, age, city, state, email, phone);
-    alert(`
+/*     alert(`
       Registration Complete \n 
       details below \n 
       name: ${firstname} ${lastname} \n 
@@ -42,7 +42,7 @@ const handleSubmit = async (e) => {
       location: ${city}, ${state} \n
       email: ${email} \n
       phone: ${phone}
-      `)
+      `) */
     setSuccess(true);
       } catch (error) {
         console.log('failed')

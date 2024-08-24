@@ -29,7 +29,7 @@ const RegDetails = () => {
       <h2 className="mx-auto font-semibold tracking-wider justify-center text-2xl text-slate-200">Registrants</h2>
     {items.map((item, index) => (
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 py-4 px-4 mx-8">
-        <div className="bg-slate-300 shadow-slate-400 shadow-lg rounded-lg relative">
+        <div className="bg-slate-200 sm:shadow-slate-700 shadow-lg rounded-lg">
           <div className="px-4 py-4">
             <div className="flex flex-col mt-2 items-start">
               <div className="font-semibold text-blue-900">Name: <span key={index} className="font-normal">{item.firstname} {item.lastname}</span></div>
