@@ -14,7 +14,7 @@ const Hero = () => {
           <div className="flex flex-col items-right max-w-lg h-48 sm:h-48 md:h-48">
             <div className="flex flex-col">
               {/* <div className="text-4xl font-semibold md:text-5xl text-slate-200">Macon Marathon</div> */}
-              <div className="hidden md:block tracking-wider text-slate-200 text-5xl">nothing special, <br/> just a marathon in macon, ga</div>
+              <div className="hidden md:block tracking-wider text-slate-200 text-6xl">nothing special, <br/> just a marathon in macon, ga</div>
             </div>
           </div>
           </div>
